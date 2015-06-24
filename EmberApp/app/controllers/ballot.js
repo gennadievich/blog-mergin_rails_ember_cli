@@ -5,11 +5,12 @@ export default Ember.Controller.extend({
 
   actions: {
     addBeer: function(name){
+      var sorted_line_items = this.model.get('sorted_line_items');
       var attrs = {
         beer_name: name,
         ballot: this.model,
-        weight: _.last(this.model.get('sorted_line_items')).get('weight') + 1
-      }
+        weight: sorted_line_items[sorted_line_items.length-1].get('weight') + 1
+      };
       var beer = this.store.createRecord('line_item', attrs);
       beer.save();
     },
