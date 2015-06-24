@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title BeerRank
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .container
+      p
+        -flash.each do |k, msg|
+          -error_class = {'error' => 'danger', 'notice' => 'info', 'success' => 'success'}[k]
+          div class='slide alert alert-#{error_class}' role='alert'
+            =msg
+      =yield

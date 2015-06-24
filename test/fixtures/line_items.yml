@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ballot: 
+  beer_id: 
+
+two:
+  ballot: 
+  beer_id: 

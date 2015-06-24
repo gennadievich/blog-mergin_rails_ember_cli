@@ -1,0 +1,14 @@
+{{#each this.model.sorted_line_items}}
+  <div class='row'>
+    <div class='col-xs-12'>
+      {{view 'item-slot' contentBinding='this'}}
+    </div>
+  </div>
+{{/each}}
+<div class='row'>
+  <div class='col-xs-12 new_beer'>
+    {{#view 'new-beer' contentBinding='this'}}
+      <input type='text' placeholder='+ ADD BEER'/>
+    {{/view}}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+h1 Pours
+h3= "Beers Consumed #{Pour.all.sum(:volume_oz)/10}"
+table.table
+  thead
+    tr
+      th Tap
+      th Volume (OZ)
+      th Time
+  - Pour.all.order('created_at DESC').each do |pour|
+    tr
+      td=pour.tap
+      td=pour.volume_oz
+      td=Time.at(pour.time.to_i).strftime("%d %b %Y, %H:%M:%S")
+      td=pour.created_at

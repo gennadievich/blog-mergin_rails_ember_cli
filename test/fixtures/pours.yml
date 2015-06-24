@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tap: 1
+  volume_oz: 9.99
+  time: MyString
+
+two:
+  tap: 1
+  volume_oz: 9.99
+  time: MyString
